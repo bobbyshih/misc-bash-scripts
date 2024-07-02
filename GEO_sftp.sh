@@ -22,9 +22,9 @@ url_to_check="https://ftp.ncbi.nlm.nih.gov/geo/series/${GEO_ACC:0:6}nnn/$GEO_ACC
 # Check if the URL is valid
 if check_url "$url_to_check"; then
   echo "GSE is valid. Continuing..."
-  # Create a directory to store the downloaded data
-  #mkdir -p $GEO_ACC
-  #cd $GEO_ACC
+  # Create a directory to store the downloaded data (Optional, wget will create a folder with the $GEO_ACC name)
+  # mkdir -p $GEO_ACC
+  # cd $GEO_ACC
 
   # Download the dataset using wget
   wget -r -np -nH --cut-dirs=3 -R "index.html*" ftp://ftp.ncbi.nlm.nih.gov/geo/series/${GEO_ACC:0:6}nnn/$GEO_ACC/
