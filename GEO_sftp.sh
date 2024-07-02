@@ -1,5 +1,6 @@
 #!/bin/bash
 
+### Script to download files from GEO, run in the target directory
 # Prompt user for input
 echo "Enter a valid GEO Series Accession (GSE#####):"
 
