@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Make sure script is executable
+# chmod +x extract_tar.sh
+
+# Provide directory to .tar files as first argument
+# Script will extract files to a directory with the same name as the .tar file
+# If the contents of the .tar file are .gz files, will gunzip those as well
+
 # Check if directory is provided as an argument
 if [ -z "$1" ]; then
   echo "Usage: $0 <directory>"
